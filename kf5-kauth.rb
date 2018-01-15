@@ -15,6 +15,13 @@ class Kf5Kauth < Formula
   depends_on "gpgme"
   depends_on "KDE-mac/kde/kf5-kcoreaddons"
 
+  stable do
+    patch do
+      url "https://phabricator.kde.org/file/data/lluzmyjcrc2xpugju5i3/PHID-FILE-23iilpt2fa6dgvorfyf7/file"
+      sha256 "88aa133b1c3ffcb6255a024ae611c8a0dfcf826c6a4d72b61fb577abc83bc2a9"
+    end
+  end
+
   def install
     args = std_cmake_args
     args << "-DBUILD_TESTING=OFF"
